@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérifier la verticalité du pylone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vérifier la verticalité du pylone</h1>
+        <p class="developpe-par">© 2024 Geanah Adil</p> <!-- Texte modifié ici -->
+
+        <!-- Formulaire de saisie -->
+        <form id="verificationForm">
+            <label for="pyloneType">Type de Pylône :</label>
+            <select id="pyloneType" name="pyloneType">
+                <option value="autostable">Autostable</option>
+                <option value="haubane">Haubané</option>
+            </select>
+
+            <label for="height">Hauteur (H) (m) :</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="measuredValue">Valeur Mesurée d'Inclinaison (D) (mm) :</label>
+            <input type="number" id="measuredValue" name="measuredValue" required>
+
+            <label for="verificationType">Choisir Type de Vérification :</label>
+            <select id="verificationType" name="verificationType">
+                <option value="norme">Norme Européenne EN 1993-3-1</option>
+                <option value="depointage">Dépointage</option>
+            </select>
+
+            <label for="depointageValue" id="depointageLabel" style="display: none;">Dépointage (en degrés) :</label>
+            <input type="number" id="depointageValue" name="depointageValue" style="display: none;">
+
+            <button type="button" onclick="calculate()">Vérifier</button>
+        </form>
+
+        <!-- Résultats -->
+        <div id="results"></div>
+    </div>
+
+    <!-- Texte explicatif en bas de la page avec des cases -->
+    <div class="bottom-text">
+        <div class="case left-case">
+            <p><strong>Pylône autostable :</strong> Mesurer et évaluer le défaut de verticalité de la structure, dans deux plans à 90° à l’aide d’un « théodolite » et vérifier que chaque écart reste inférieur au 1/1000ème de la hauteur du pylône.</p>
+            <p><strong>Pylône haubané :</strong> Mesurer et évaluer le défaut de verticalité de la structure, dans deux plans à 90° à l’aide d’un « théodolite » et vérifier que chaque écart reste inférieur au 1/2000ème de la hauteur à chacun des points d’accrochage de haubans.</p>
+            <p>Nota : L’écart mesuré ci-dessus correspond à l’écart par rapport à la verticalité d’une ligne entre deux points quelconques sur l’axe vertical attendu de la structure, lorsqu’il est mesuré par vent nul.</p>
+        </div>
+        <div class="case right-case">
+            <p><strong>Dépointage :</strong> C'est l'angle formé par la tangente à la déformée du pylône et la verticale.</p>
+            <p><strong>Norme EN 1993-3-1 Calcul des structures en acier Document d'Application Nationale — Tours, mâts et cheminées — Partie 3-1 : Pylônes et mâts haubanés</strong></p>
+            <ul>
+                <li>Pylône autostable : "Il convient que le faux aplomb maximal au sommet du pylône soit inférieur à 1/1000 de la hauteur du pylône." (page 44)</li>
+                <li>Pylône haubané : "Il convient que la flèche initiale du fût du mât haubané entre deux niveaux de haubans reste inférieure à L/2000." (page 45)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

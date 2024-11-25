@@ -1,0 +1,95 @@
+﻿/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #ff0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 1.4em;
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.developpe-par {
+    color: red;
+    font-size: 0.8em;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+    display: block;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 10px;
+    font-size: 0.9em;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #ff0;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #ff0;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#results {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Cases de texte explicatif en bas de page */
+.bottom-text {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.case {
+    background-color: #333;
+    color: #ff0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.85em; /* Taille de texte légèrement augmentée */
+    width: 48%;
+}
+
+.left-case {
+    text-align: left;
+}
+
+.right-case {
+    text-align: left;
+}
